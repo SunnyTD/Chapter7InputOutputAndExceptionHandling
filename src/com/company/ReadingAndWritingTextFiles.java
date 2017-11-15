@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class ReadingAndWritingTextFiles
 {
     // The throws command makes sure to end the program if the FileNotFoundException happens anytime in the program.
-    public void Readingandwritingtextfiles() throws FileNotFoundException
+    public void ReadingAndWritingTextFiles() throws FileNotFoundException
     {
         // Has set in/out file destinations.
         String inputFileName = "E:\\exampleinput.txt";
@@ -27,7 +27,7 @@ public class ReadingAndWritingTextFiles
         Scanner in = new Scanner(inputFile);
         PrintWriter out = new PrintWriter(outputFileName);
 
-        // Read the input and write the output
+        // Reads the input and writes the output
         double total = 0;
 
         while (in.hasNextDouble())
@@ -38,6 +38,7 @@ public class ReadingAndWritingTextFiles
         }
         out.printf("Total: %8.2f%n", total);
 
+        // Remember to close the scanner and printwriter, otherwise some output may be missing.
         in.close();
         out.close();
     }
